@@ -5,9 +5,10 @@
 , pkgs
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage
+rec {
   pname = "psst";
-  version = "0.0.1";
+  version = "1627cd4a301dd51e9ee3034294cd7b0d94d02ddc";
 
   nativeBuildInputs = [ pkgs.pkg-config ];
 
@@ -20,11 +21,11 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "jpochyla";
     repo = pname;
-    rev = "4de5ad1";
-    sha256 = "sha256-UqugggZmAlvJ+ty+261eHUkl2IPNbLaTYBY1pOrY8DI=";
+    rev = "1627cd4a301dd51e9ee3034294cd7b0d94d02ddc";
+    sha256 = "sha256-kepvYhmieXx6Hj79aqaA7tYUnueaBsNx0U4lV7K6LuU=";
   };
 
-  cargoSha256 = "sha256-BORftZOpn8O05bIrWpak2Bz99Kast/6io1dD2ZlMVx0=";
+  cargoSha256 = "sha256-D1KNqCNKX8bsg8TGFrckLd/ZCzk6VG/3ObFPGgdnQ6c=";
 
   meta = with lib; {
     description = "Fast and multi-platform Spotify client with native GUI";
