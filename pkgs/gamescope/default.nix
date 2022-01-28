@@ -3,7 +3,7 @@
 , fetchFromGitHub
 , cmake
 , libseat
-, meson_0_60
+, meson
 , pkgconfig
 , libdrm
 , xorg
@@ -96,7 +96,7 @@ stdenv.mkDerivation rec {
     wlroots
     libseat
   ];
-  nativeBuildInputs = [ meson_0_60 cmake pkgconfig glslang ninja makeWrapper stb_ ];
+  nativeBuildInputs = [ meson cmake pkgconfig glslang ninja makeWrapper stb_ ];
 
   meta = with lib; {
     description = "The micro-compositor formerly known as steamcompmgr";
